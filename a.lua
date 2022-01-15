@@ -52,12 +52,15 @@ function EquipWeapon(ToolSe)
         game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
     end
 end
-
-for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
-    if v:IsA("Seat") then
-        v:Destroy()
+spawn(function()
+    while wait() do
+        for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+           if v:IsA("Seat") then
+               v:Destroy()
+           end
+        end
     end
-end
+end)
 
 Method = CFrame.new(0,0,5)
 Methodu = 1
