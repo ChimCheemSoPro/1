@@ -295,7 +295,7 @@ spawn(function()
     while wait() do
         if _G.hopbounty then
             if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.InCombat.Visible == false then
-                syn.queue_on_teleport("repeat wait() until game:IsLoaded() wait(7) loadstring(game:HttpGet'https://chvn--vn--vn--vn.000webhostapp.com/bounty.lua')()")
+                syn.queue_on_teleport("repeat wait() until game:IsLoaded() wait(7) loadstring(game:HttpGet'https://raw.githubusercontent.com/ChimCheemSoPro/1/main/a.lua')()")
                 Teleport()
             end
         end
