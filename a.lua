@@ -53,6 +53,14 @@ function EquipWeapon(ToolSe)
     end
 end
 
+spawn(function()
+    while wait() do
+        if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit == true then
+	    game:GetService("Players").LocalPlayer.Character.Humanoid.Sit = false
+        end
+    end
+end)
+
 Method = CFrame.new(0,0,5)
 Methodu = 1
 spawn(function()
