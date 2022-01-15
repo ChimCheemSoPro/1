@@ -53,7 +53,7 @@ function EquipWeapon(ToolSe)
     end
 end
 spawn(function()
-    while wait() do
+    while wait(1) do
         for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
            if v:IsA("Seat") then
                v:Destroy()
