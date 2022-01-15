@@ -29,9 +29,13 @@ function godmode()
             tweento(CFrame.new(2174.94873, 28.7312393, -6728.83154))
         until (Vector3.new(2174.94873, 28.7312393, -6728.83154)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 10
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
-        repeat wait()
-            tweento(game:GetService("Workspace").Enemies["Marine Commodore [Lv. 1700]"].HumanoidRootPart.CFrame * CFrame.new(0,0,-5))
-        until game.Players.LocalPlayer.Character.Humanoid.Health < 0
+        if game:GetService("Workspace").Enemies:FindFirstChild("Marine Commodore [Lv. 1700]") then
+            repeat wait()
+                tweento(game:GetService("Workspace").Enemies["Marine Commodore [Lv. 1700]"].HumanoidRootPart.CFrame * CFrame.new(0,0,-5))
+            until game.Players.LocalPlayer.Character.Humanoid.Health < 0
+        else
+            Teleport()
+        end
         _G.Change = false
     end
 end
