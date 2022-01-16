@@ -107,6 +107,7 @@ spawn(function()
                 end
             end
         elseif game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+            repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
             repeat wait() until game.Players.LocalPlayer.Character.Humanoid.Health > 50
             godmode()
         end
